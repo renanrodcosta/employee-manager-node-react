@@ -62,7 +62,7 @@ const employeesController = ({ responses, Employee }) => {
   const update = (req, res, next) => {
     const { noContent, conflict, internalError } = responses(res)
 
-    return Employee.load(req.body.email)
+    return Employee.findOne({ email: req.body.email })
       .then(employee => {
         if (employee && employee._id !== req.params.id) {
           return Promise.reject(AlreadyExistsError)

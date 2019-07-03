@@ -37,7 +37,7 @@ const departmentsController = ({ responses, Department }) => {
     const { noContent, internalError } = responses(res)
     const { name } = req.params
 
-    return Department.remove({ name })
+    return Department.deleteOne({ name })
       .then(noContent)
       .catch(internalError)
       .then(next)
