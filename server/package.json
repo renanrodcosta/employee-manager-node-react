@@ -25,7 +25,7 @@
     "error-factory": "^0.1.6",
     "express": "^4.17.1",
     "mock-req-res": "^1.1.1",
-    "mongoose": "^5.6.2",
+    "mongoose": "^5.7.5",
     "nyc": "^14.1.1"
   }
 }
